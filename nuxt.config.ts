@@ -38,6 +38,11 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-02-20',
 
   vite: {
+    build: {
+      rollupOptions: {
+        external: ['quill', 'chart.js/auto']
+      }
+    },
     plugins: [
       tailwindcss(),
     ],
