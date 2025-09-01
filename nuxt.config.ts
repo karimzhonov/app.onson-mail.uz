@@ -21,7 +21,6 @@ export default defineNuxtConfig({
   },
 
   css: [
-    '@/assets/styles.scss',
     '@/assets/tailwind.css',
   ],
 
@@ -46,6 +45,9 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss(),
     ],
+    server: {
+      allowedHosts: ['d5cc1f5f86bc.ngrok-free.app', 'localhost', '127.0.0.1', 'app.onson-mail.uz'],
+    }
   },
 
   eslint: {
