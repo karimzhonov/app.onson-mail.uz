@@ -1,54 +1,75 @@
-# Sakai-Nuxt Starter
+# Nuxt Minimal Starter
 
-Welcome to the Sakai-Nuxt Starter template! This is a personal starter kit designed to help you kickstart your Nuxt.js projects with ease.
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Overview
+## Setup
 
-The Sakai-Nuxt Starter is a port of the [Sakai Vue](https://github.com/primefaces/sakai-vue) template, tailored for Nuxt.js applications. It features a customized sidebar that replaces the default one, aiming to provide a more intuitive navigation experience.
+Make sure to install dependencies:
 
-**Note:** As this is a starter kit, it does not include certain configurations, such as the ability to change the color palette like the original Sakai Vue template. These features are planned for a more complete template currently under development.
+```bash
+# npm
+npm install
 
-## Features
+# pnpm
+pnpm install
 
-- **Customized Sidebar:** A revamped sidebar for improved navigation.
-- **Nuxt.js Integration:** Pre-configured with Nuxt.js to streamline your development process.
-- **Starter Template:** Designed to be a foundation for your projects, allowing for easy customization and expansion.
+# yarn
+yarn install
 
-## Getting Started
+# bun
+bun install
+```
 
-To begin using the Sakai-Nuxt Starter template:
+## Development Server
 
-1. **Clone the repository:**
+Start the development server on `http://localhost:3000`:
 
-   ```bash
-   git clone https://github.com/j0rgedev/sakai-nuxt-starter.git
-    ```
-2. **Navigate to the project directory:**
+```bash
+# npm
+npm run dev
 
-   ```bash
-   cd sakai-nuxt-starter
-   ```
-3. **Install the dependencies:**
+# pnpm
+pnpm dev
 
-   ```bash
-    pnpm install
-    ```
-4. **Run the development server:**
+# yarn
+yarn dev
 
-   ```bash
-   pnpm run dev
-   ```
-5. **Open your browser and navigate to `http://localhost:3000` to view the application.**
+# bun
+bun run dev
+```
 
+## Production
 
-## License
+Build the application for production:
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+```bash
+# npm
+npm run build
 
-## Acknowledgements
+# pnpm
+pnpm build
 
-Special thanks to the creators of the [Sakai Vue](https://github.com/primefaces/sakai-vue) template for the original design and inspiration.
+# yarn
+yarn build
 
----
+# bun
+bun run build
+```
 
-Happy coding!
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

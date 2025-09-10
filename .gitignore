@@ -19,11 +19,6 @@ logs
 .idea
 
 # Local env files
-.env.local
+.env
 .env.*
 !.env.example
-.env
-
-# Jetbrains
-.idea
-
