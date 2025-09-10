@@ -12,7 +12,20 @@ export default defineNuxtConfig({
       allowedHosts: [
         'b0f41c11d884.ngrok-free.app'
       ]
+    },
+    esbuild: {
+      legalComments: 'none'
+    },
+    build: {
+      minify: false, // ❌ отключаем esbuild minifier
+      rollupOptions: {
+        // если нужно исключить пакеты
+        external: ['@telegram-apps/sdk', '@telegram-apps/sdk-vue']
+      }
     }
+  },
+  nitro: {
+    minify: false
   },
   primevue: {
     autoImport: true,
