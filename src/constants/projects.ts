@@ -1,17 +1,12 @@
-import {Home, Truck, PlaneTakeoff, ShoppingCart, User, type LucideIcon} from "lucide-vue-next";
+import {Truck, PlaneTakeoff, ShoppingCart, type LucideIcon} from "lucide-vue-next";
 
-interface BottomMenu {
+interface Projects {
     label: string;
     icon: LucideIcon;
     link: string;
 }
 
-export const bottomMenu: BottomMenu[] = [
-    {
-        label: "Главная",
-        icon: Home,
-        link: '/'
-    },
+export const projects: Projects[] = [
     {
         label: "Карго",
         icon: Truck,
@@ -27,9 +22,4 @@ export const bottomMenu: BottomMenu[] = [
         icon: ShoppingCart,
         link: '/market'
     },
-    {
-        label: "Профиль",
-        icon: User,
-        link: '/account'
-    }
 ]

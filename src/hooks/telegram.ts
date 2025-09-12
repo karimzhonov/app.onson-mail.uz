@@ -11,6 +11,7 @@ export function useTelegram() {
     return {
         tg,
         init,
+        isFullscreen: tg.isFullscreen,
         platform: tg.platform,
         version: tg.version,
         close: tg.close,

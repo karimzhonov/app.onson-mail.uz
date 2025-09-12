@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {isTMA} from "@/hooks/telegram";
-import BottomMenu from "@/components/layouts/BottomMenu.vue";
 import {ref} from "vue";
+import BottomMenu from "@/components/layouts/BottomMenu.vue";
 
 const copied = ref(false)
 const BOT_USERNAME = 'onson_mail_bot' // <-- замените на своего бота

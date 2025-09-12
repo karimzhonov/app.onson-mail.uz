@@ -1,5 +1,21 @@
 <script setup lang="ts">
-import {bottomMenu} from "@/components/layouts/bottom-menu";
+import {projects} from "@/constants/projects";
+import {computed} from "vue";
+import {Home, User} from "lucide-vue-next";
+
+const bottomMenu = computed(() => [
+    {
+      label: "Главная",
+      icon: Home,
+      link: '/'
+    },
+    ...projects,
+    {
+      label: "Профиль",
+      icon: User,
+      link: '/account'
+    }
+])
 </script>
 
 <template>
@@ -10,8 +26,8 @@ import {bottomMenu} from "@/components/layouts/bottom-menu";
         class="flex flex-col items-center"
         :class="{'text-primary': item.link === '/' ? item.link == $route.path : $route.path.startsWith(item.link)}"
     >
-      <component :is="item.icon" />
-      {{ item.label }}
+      <component :is="item.icon" :size="20" />
+      <p class="text-sm">{{ item.label }}</p>
     </router-link>
   </div>
 </template>

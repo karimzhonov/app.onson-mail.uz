@@ -1,10 +1,10 @@
 import { createApp } from 'vue'
 import PrimeVue from 'primevue/config';
-import theme from './assets/theme.ts'
+import theme from './assets/theme'
 import App from './App.vue'
 import { router } from './router'
 import './assets/css/style.css'
-import {useTelegram} from "./hooks/telegram.ts";
+import {useTelegram} from "./hooks/telegram";
 
 const {init} = useTelegram()
 init()
