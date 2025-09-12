@@ -11,7 +11,9 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [primeui],
+  plugins: [
+      primeui,
+  ],
   corePlugins: {
     scrollBehavior: true,
   },
