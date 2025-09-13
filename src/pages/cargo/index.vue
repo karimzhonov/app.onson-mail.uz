@@ -1,5 +1,5 @@
 <template>
-  <div class="p-3">
+  <div class="px-3">
     <Menu />
   </div>
 </template>

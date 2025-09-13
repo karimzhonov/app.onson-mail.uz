@@ -1,7 +1,7 @@
 <template>
     <div
         class="h-screen w-screen relative"
-        :class="{'pt-12': isFullscreen, 'pt-3': !isFullscreen}">
+        :class="{'pt-16': isFullscreen, 'pt-3': !isFullscreen}">
         <RouterView />
     </div>
 </template>

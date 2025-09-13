@@ -5,7 +5,14 @@ export function useTelegram() {
 
     const init = () => {
         tg.ready()
-        tg.expand()
+        if (!tg.isFullscreen) {
+            try {
+                tg.requestFullscreen()
+            } catch {
+                tg.expand()
+            }
+        }
+        tg.enableClosingConfirmation()
     }
 
     return {

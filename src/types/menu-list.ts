@@ -8,6 +8,7 @@ interface ItemData {
     badge?: string | number
     tag?: string
     chevron?: boolean
+    command?: () => void
 }
 
 export interface MenuData extends ItemData {

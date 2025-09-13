@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import {projects} from "@/constants/projects";
 import {computed} from "vue";
 import {Home, User} from "lucide-vue-next";
+import { useProjects } from "@/hooks/projects";
+
+const projects = useProjects()
 
 const bottomMenu = computed(() => [
     {
@@ -19,7 +21,7 @@ const bottomMenu = computed(() => [
 </script>
 
 <template>
-  <div class="flex flex-row justify-around fixed bottom-0 w-full p-2 border-t border-t-primary bg-surface-900">
+  <div class="flex flex-row justify-around fixed bottom-0 w-full p-2 pb-6 border-t border-t-primary bg-surface-900">
     <router-link
         v-for="item in bottomMenu"
         :to="item.link"

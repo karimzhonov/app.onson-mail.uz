@@ -27,7 +27,7 @@ defineProps<{
 
       <!--      Items      -->
       <div class="flex flex-col gap-3">
-        <router-link class="flex flex-row bg-surface-800 items-center justify-between border border-primary rounded-lg px-2 py-1.5" v-for="menu in item.items" :to="menu.link ?? '#'">
+        <router-link @click="menu.command" class="flex flex-row bg-surface-800 items-center justify-between border border-primary rounded-lg px-2 py-1.5" v-for="menu in item.items" :to="menu.link ?? '#'">
           <div class="flex flex-row gap-3">
             <component :is="menu.icon" />
             <p>{{menu.label}}</p>

@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import {projects} from "@/constants/projects";
+import { useProjects } from '@/hooks/projects';
+
+const projects = useProjects()
 
 </script>
 

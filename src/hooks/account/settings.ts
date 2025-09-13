@@ -1,17 +1,21 @@
 import {Languages, MessageCircleMore} from "lucide-vue-next";
 import {MenuData} from "@/types/menu-list";
+import { locales } from "@/i18n";
+import { useI18n } from "vue-i18n";
 
 
 export const useSettings = (): MenuData[] => {
+    const {locale, t} = useI18n()
+
     return [
         {
-            label: 'Основные настройки',
+            label: t('Основные настройки'),
             items: [
                 {
-                    label: 'Язык',
+                    label: t('Язык'),
                     icon: Languages,
-                    value: 'Русский',
-                    link: '#',
+                    value: locales[locale.value].name,
+                    link: '/account/languages',
                     chevron: true
                 },
             ]
@@ -19,7 +23,7 @@ export const useSettings = (): MenuData[] => {
         {
             items: [
                 {
-                    label: 'Обратиться в поддержку',
+                    label: t('Обратиться в поддержку'),
                     icon: MessageCircleMore,
                     link: '#',
                     tag: 'soon',
@@ -30,11 +34,11 @@ export const useSettings = (): MenuData[] => {
         {
             items: [
                 {
-                    label: 'Пользовательское соглашение',
+                    label: t('Пользовательское соглашение'),
                     link: '#',
                 },
                 {
-                    label: 'Политика конфиденциальности',
+                    label: t('Политика конфиденциальности'),
                     link: '#',
                 }
             ]

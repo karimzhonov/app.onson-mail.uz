@@ -30,7 +30,7 @@ function copyOpenInstructions() {
     <BottomMenu />
   </div>
 
-  <div v-else class="w-full max-w-md p-8 text-center m-auto">
+  <div v-else class="w-screen h-screen max-w-md p-8 text-center m-auto">
     <img src="/logo.png" alt="Telegram" class="mx-auto w-24 h-24 mb-4" />
     <h1 class="text-2xl font-semibold mb-2">Пожалуйста, откройте через Telegram</h1>
 

@@ -1,17 +1,12 @@
 <script setup lang="ts">
-import {onMounted, ref} from "vue";
-
-const isTelegram = ref<boolean>(false)
-
-onMounted(async () => {
-  isTelegram.value = true
-})
+import IsTelegram from "@/components/layouts/IsTelegram.vue";
 </script>
 
 <template>
-  <RouterView v-if="isTelegram" />
-  <div v-else>
-    Not telegram
+  <div class="bg-surface-900 text-surface-50 ">
+    <IsTelegram>
+      <RouterView />
+    </IsTelegram>
   </div>
 </template>
 
