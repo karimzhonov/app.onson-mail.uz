@@ -30,13 +30,15 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   const {tg} = useTelegram()
-  
+
   if (to.path !== '/') {
     if (!tg.BackButton.isVisible) {
       tg.BackButton.show()
+      tg.BackButton.onClick(router.back)
     }
   } else {
     tg.BackButton.hide()
+    tg.BackButton.offClick(router.back)
   }
   next()
 })

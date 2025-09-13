@@ -6,11 +6,13 @@ const projects = useProjects()
 </script>
 
 <template>
-  <div class="grid grid-cols-4 gap-3">
+  <div class="grid grid-cols-3 gap-3">
     <router-link
-        class="flex flex-col items-center bg-surface-800 justify-center border border-primary rounded-lg aspect-video"
+        class="flex flex-col items-center justify-center aspect-video gap-3"
         v-for="menu in projects" :to="menu.link">
-        <component :is="menu.icon" :size="18" />
+        <div class="size-12 flex justify-center items-center bg-primary-600 rounded-full">
+          <component :is="menu.icon" />
+        </div>
         <p class="text-sm">{{menu.label}}</p>
     </router-link>
   </div>

@@ -27,14 +27,16 @@ defineProps<{
 
       <!--      Items      -->
       <div class="flex flex-col gap-3">
-        <router-link @click="menu.command" class="flex flex-row bg-surface-800 items-center justify-between border border-primary rounded-lg px-2 py-1.5" v-for="menu in item.items" :to="menu.link ?? '#'">
-          <div class="flex flex-row gap-3">
-            <component :is="menu.icon" />
+        <router-link @click="menu.command" class="flex flex-row bg-surface-800 items-center justify-between rounded-lg px-2 py-1.5" v-for="menu in item.items" :to="menu.link ?? '#'">
+          <div class="flex flex-row items-center gap-3">
+            <div v-if="menu.icon" class="size-8 flex justify-center items-center bg-primary-600 rounded-full">
+              <component :is="menu.icon" :size="16" />
+            </div>
             <p>{{menu.label}}</p>
           </div>
           <div class="flex flex-row gap-2 items-center">
             <p v-if="menu.value">{{menu.value}}</p>
-            <Tag v-if="menu.tag" :value="menu.tag" severity="danger" rounded :pt="{root: {class: '!py-[0.1rem] !px-1'}, label: {class: '!text-xs'}}" />
+            <Badge v-if="menu.tag" :value="menu.tag" size="small" severity="danger" />
             <Badge v-if="menu.badge" size="small" rounded>{{menu.badge}}</Badge>
             <ChevronRight v-if="menu.chevron" />
           </div>

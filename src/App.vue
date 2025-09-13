@@ -3,7 +3,7 @@ import IsTelegram from "@/components/layouts/IsTelegram.vue";
 </script>
 
 <template>
-  <div class="bg-surface-900 text-surface-50 ">
+  <div class="bg-surface-900 text-surface-50">
     <IsTelegram>
       <RouterView />
     </IsTelegram>

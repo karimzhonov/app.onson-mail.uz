@@ -1,4 +1,4 @@
-import Layout from '@/layouts/account.vue'
+import Layout from '@/layouts/default.vue'
 import Account from '@/pages/account/index.vue'
 import Languages from '@/pages/account/languages.vue'
 

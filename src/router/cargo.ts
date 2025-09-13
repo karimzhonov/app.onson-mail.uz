@@ -1,4 +1,4 @@
-import Layout from '../layouts/cargo.vue'
+import Layout from '../layouts/default.vue'
 import Cargo from '../pages/cargo/index.vue'
 
 export default [

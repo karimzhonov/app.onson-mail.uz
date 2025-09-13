@@ -21,7 +21,11 @@ const bottomMenu = computed(() => [
 </script>
 
 <template>
-  <div class="flex flex-row justify-around fixed bottom-0 w-full p-2 pb-6 border-t border-t-primary bg-surface-900">
+  <div class="flex flex-row justify-around sticky bottom-0 w-full z-50">
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    <div class="w-full flex justify-around items-center p-3 pb-6 z-10
+              border-t border-primary-900 
+              rounded-t-2xl shadow-lg p-3">
     <router-link
         v-for="item in bottomMenu"
         :to="item.link"
@@ -31,6 +35,7 @@ const bottomMenu = computed(() => [
       <component :is="item.icon" :size="20" />
       <p class="text-sm">{{ item.label }}</p>
     </router-link>
+    </div>
   </div>
 </template>
 

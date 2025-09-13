@@ -5,11 +5,13 @@
       ONSON MAIL GROUP
     </p>
   </div>
-  <div class="p-3">
+  <div class="p-3 flex flex-col gap-5">
     <Projects />
+    <NewsCarousel />
   </div>
 </template>
 <script setup lang="ts">
 
+import NewsCarousel from "@/components/NewsCarousel.vue";
 import Projects from "@/components/Projects.vue";
 </script>
