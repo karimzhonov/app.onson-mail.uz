@@ -21,7 +21,7 @@ const bottomMenu = computed(() => [
 </script>
 
 <template>
-  <div class="flex flex-row justify-around sticky bottom-0 w-full z-50">
+  <div class="flex flex-row justify-around fixed bottom-0 w-full z-50">
     <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
     <div class="w-full flex justify-around items-center p-3 pb-6 z-10
               border-t border-primary-900 

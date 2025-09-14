@@ -17,7 +17,7 @@ instance.interceptors.request.use((config) => {
 instance.interceptors.response.use(
     response => response,
     async (error) => {
-        console.error(error)
+        throw error
     }
 )
 

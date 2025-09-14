@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import IsTelegram from "@/components/layouts/IsTelegram.vue";
+import { Toast } from "primevue";
 </script>
 
 <template>
+  <Toast />
   <div class="bg-surface-900 text-surface-50 safe">
     <IsTelegram>
       <RouterView />
@@ -12,6 +14,5 @@ import IsTelegram from "@/components/layouts/IsTelegram.vue";
 <style>
 .safe {
   padding-top: var(--tg-safe-top);
-  padding-bottom: var(--tg-safe-bottom);
 }
 </style>

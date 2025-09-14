@@ -1,21 +1,44 @@
 <template>
     <div
         class="h-screen w-screen relative pt-3">
-        <RouterView />
+        <div class="h-full w-full" v-if="isAuth"> 
+            <RouterView />
+            <BottomMenu />
+        </div>
+        <div v-else class="w-full h-full flex gap-3 flex-col justify-center items-center">
+            <img src="/logo.png" width="100" class="blink-fade" />
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
+import BottomMenu from '@/components/layouts/BottomMenu.vue'
 import { useAuth } from '@/hooks/account'
 import { useTelegramUser } from '@/hooks/telegram'
+import { ref } from 'vue'
 
+const isAuth = ref(false)
 
-
-const {mutate} = useAuth()
+const {mutate} = useAuth({
+    onSuccess: () => {
+        isAuth.value = true
+    }
+})
 const {initData} = useTelegramUser()
 
-const params =  new URLSearchParams(initData)
-
-const data = Object.fromEntries(params.entries())
-mutate(data)
+mutate({initData})
 </script>
+<style>
+.blink-fade {
+  animation: blink-fade 1.2s ease-in-out infinite;
+}
+
+@keyframes blink-fade {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blink-fade { animation: none; }
+}
+</style>

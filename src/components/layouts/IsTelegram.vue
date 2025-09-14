@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import {isTMA} from "@/hooks/telegram";
 import {ref} from "vue";
-import BottomMenu from "@/components/layouts/BottomMenu.vue";
 
 const copied = ref(false)
 const BOT_USERNAME = 'onson_mail_bot' // <-- замените на своего бота
@@ -27,7 +26,6 @@ function copyOpenInstructions() {
 <div>
   <div v-if="isTelegram" >
     <slot />
-    <BottomMenu />
   </div>
 
   <div v-else class="w-screen h-screen max-w-md p-8 text-center m-auto">

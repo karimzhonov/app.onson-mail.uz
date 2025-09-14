@@ -13,8 +13,8 @@ export default () => {
     WebApp.enableClosingConfirmation()
 
     const root = document.documentElement
-    console.log(WebApp.safeAreaInset.top);
     
-    root.style.setProperty('--tg-safe-top', WebApp.safeAreaInset.top + 'px')
-    root.style.setProperty('--tg-safe-bottom', WebApp.safeAreaInset.bottom + 'px')
+    root.style.setProperty('--tg-safe-top', WebApp.viewportStableHeight
+      ? window.innerHeight - WebApp.viewportStableHeight + "px"
+      : "0px")
 }
