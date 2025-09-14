@@ -1,6 +1,6 @@
 import {Languages, MessageCircleMore} from "lucide-vue-next";
 import {MenuData} from "@/types/menu-list";
-import { locales } from "@/i18n";
+import { locales } from "@/plugins/i18n";
 import { useI18n } from "vue-i18n";
 
 
