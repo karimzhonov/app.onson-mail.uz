@@ -14,7 +14,5 @@ export default () => {
 
     const root = document.documentElement
     
-    root.style.setProperty('--tg-safe-top', WebApp.viewportStableHeight
-      ? window.innerHeight - WebApp.viewportStableHeight + "px"
-      : "0px")
+    root.style.setProperty('--tg-safe-top', "70px")
 }

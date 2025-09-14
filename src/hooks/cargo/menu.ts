@@ -1,4 +1,4 @@
-import {Box, IdCard} from "lucide-vue-next";
+import {Box, IdCard, MapPin} from "lucide-vue-next";
 import {MenuData} from "@/types/menu-list";
 import { useI18n } from "vue-i18n";
 
@@ -8,6 +8,12 @@ export const useMenu = (): MenuData[] => {
     return [
         {
             items: [
+                {
+                    label: t('Филиали'),
+                    icon: MapPin,
+                    link: '/cargo/filial',
+                    chevron: true,
+                },
                 {
                     label: t('Паспорта'),
                     icon: IdCard,

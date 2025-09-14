@@ -1,12 +1,12 @@
 <template>
     <div
-        class="h-screen w-screen relative pt-3">
+        class="h-screen w-screen relative">
         <div class="h-full w-full" v-if="isAuth"> 
-            <RouterView />
+            <RouterView class="p-3" />
             <BottomMenu />
         </div>
-        <div v-else class="w-full h-full flex gap-3 flex-col justify-center items-center">
-            <img src="/logo.png" width="100" class="blink-fade" />
+        <div v-else class="w-full h-full mt-[100px]">
+            <img src="/logo.png" width="100" class="blink-fade mx-auto" />
         </div>
     </div>
 </template>

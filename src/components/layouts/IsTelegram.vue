@@ -24,9 +24,7 @@ function copyOpenInstructions() {
 
 <template>
 <div>
-  <div v-if="isTelegram" >
-    <slot />
-  </div>
+  <slot v-if="isTelegram" />
 
   <div v-else class="w-screen h-screen max-w-md p-8 text-center m-auto">
     <img src="/logo.png" alt="Telegram" class="mx-auto w-24 h-24 mb-4" />
