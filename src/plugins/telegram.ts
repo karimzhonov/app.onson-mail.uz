@@ -11,8 +11,4 @@ export default () => {
         }
     }
     WebApp.enableClosingConfirmation()
-
-    const root = document.documentElement
-    
-    root.style.setProperty('--tg-safe-top', "70px")
 }

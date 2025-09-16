@@ -9,7 +9,6 @@ const i18n = useI18n()
 
 const menu = [
         {
-            label: 'Язык',
             items: Object.values(locales).map(v => ({
                 label: v.name,
                 command: () => {
@@ -24,5 +23,6 @@ const menu = [
 </script>
 
 <template>
+  <h2 class="text-center text-lg">{{$t('Язык')}}</h2>
   <MenuList :items="menu" />
 </template>

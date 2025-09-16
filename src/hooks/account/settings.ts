@@ -23,16 +23,16 @@ export const useSettings = (): MenuData[] => {
         {
             items: [
                 {
-                    label: t('Бонусные баллы'),
+                    label: t('Баланс'),
                     icon: Coins,
                     value: '10 $',
-                    link: '/account/bonus',
+                    link: '/account/balance',
                     chevron: true
                 },
                 {
                     label: t('Реферальная система'),
                     icon: Link,
-                    link: '/account/link',
+                    link: '/account/referral',
                     chevron: true
                 },
             ]

@@ -9,12 +9,12 @@
         }"
         >
         <template #item="slotProps">
-            <div class="flex flex-row gap-3 justify-between bg-surface-800 p-3 rounded-lg mx-3 h-[150px]">
+            <div class="flex flex-row gap-3 justify-between p-3 rounded-lg mx-3 h-[150px]" :class="slotProps.data.class">
                 <div class="flex flex-col justify-between">
                     <p>{{ slotProps.data.text }}</p>
                     <Button as="router-link" :to="slotProps.data.link" class="w-fit" rounded>{{ slotProps.data.button }}</Button>
                 </div>
-                <div class="size-[70px] mt-3">
+                <div class="mt-3" :class="slotProps.data.imageClass">
                     <img :src="slotProps.data.image" class="w-full" />
                 </div>
             </div>

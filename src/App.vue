@@ -13,6 +13,6 @@ import { Toast } from "primevue";
 </template>
 <style>
 .safe {
-  padding-top: var(--tg-safe-top);
+  padding-top: 60px;
 }
 </style>
