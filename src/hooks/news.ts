@@ -18,7 +18,7 @@ export const useNews = () => {
             imageClass: 'size-[120px]',
             link: '/tourism',
             button: t('Искать'),
-            class: 'bg-linear-to-r from-orange-500 to-green-500'
+            class: 'bg-linear-to-r from-blue-500 to-indigo-300'
         }
     ]
 }

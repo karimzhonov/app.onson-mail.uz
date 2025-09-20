@@ -1,2 +1,9 @@
 @import "tailwindcss";
 @import "tailwindcss-primeui";
+
+
+html, body, #app {
+  touch-action: manipulation; /* предотвращает двойной тап-зум и некоторые жесты */
+  -ms-touch-action: manipulation;
+  overscroll-behavior: none; /* предотвращает нежелательные прокрутки */
+}

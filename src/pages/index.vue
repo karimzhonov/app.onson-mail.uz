@@ -12,6 +12,6 @@
 </template>
 <script setup lang="ts">
 
-import NewsCarousel from "@/components/NewsCarousel.vue";
+import NewsCarousel from "@/components/news/NewsCarousel.vue";
 import Projects from "@/components/Projects.vue";
 </script>
