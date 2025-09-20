@@ -19,6 +19,7 @@
           fluid size="small"
           @click="copyLink"
           severity="secondary"
+          :disabled="copied"
       >
         <Copy v-if="!copied" />
         <LoaderCircle v-else class="animate-spin" />
@@ -58,13 +59,7 @@ const copyLink = async () => {
 };
 // поделиться в Telegram
 const shareReferral = () => {
-  const text = `🔥 Присоединяйся в Onson Mail Group! Вот моя реферальная ссылка, через эту ссылку вы получаете 2$ подарок: ${referralLink.value}`;
-
-  if (tg?.shareMessage) {
-    tg.shareMessage(text);
-  } else {
-    // fallback через openTelegramLink
-    tg.openTelegramLink(`https://t.me/share/url?url=${encodeURIComponent(referralLink.value)}&text=${encodeURIComponent(text)}`);
-  }
+  const text = `🔥 Присоединяйся в Onson Mail Group! Вот моя реферальная ссылка, через эту ссылку вы получаете 2$ подарок`;
+  tg.openTelegramLink(`https://t.me/share/url?url=${encodeURIComponent(referralLink.value)}&text=${encodeURIComponent(text)}`);
 };
 </script>

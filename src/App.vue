@@ -11,19 +11,12 @@ function disableZoomHandlers() {
     }
   }, { passive: false });
 
-  // 2) Запрет pinch-zoom (мобильные)
-  window.addEventListener('touchmove', (e) => {
-    if (e.scale && e.scale !== 1) {
-      e.preventDefault();
-    }
-  }, { passive: false });
-
-  // 3) iOS Safari gesturestart (предотвращает некоторые зумы)
+  // 2) iOS Safari gesturestart (предотвращает некоторые зумы)
   document.addEventListener('gesturestart', (e) => {
     e.preventDefault();
   });
 
-  // 4) Блокировка двойного клика-зума (на всякий случай)
+  // 3) Блокировка двойного клика-зума (на всякий случай)
   let lastTouch = 0;
   document.addEventListener('touchend', (e) => {
     const now = Date.now();
