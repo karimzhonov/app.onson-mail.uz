@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {Badge, Tag} from "primevue";
+import {Badge, Tag, ToggleSwitch} from "primevue";
 import {ChevronRight} from 'lucide-vue-next'
 import {MenuData} from "@/types/menu-list";
 
@@ -39,6 +39,7 @@ defineProps<{
             <Badge v-if="menu.tag" :value="menu.tag" size="small" severity="danger" />
             <Badge v-if="menu.badge" size="small" rounded>{{menu.badge}}</Badge>
             <ChevronRight v-if="menu.chevron" />
+            <ToggleSwitch v-if="menu.toggle" v-model:model-value="menu.toggleValue" />
           </div>
         </router-link>
       </div>

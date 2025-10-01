@@ -8,8 +8,11 @@ export function useTelegram() {
         isFullscreen: tg.isFullscreen,
         platform: tg.platform,
         version: tg.version,
-        close: tg.close,
-        expand: tg.expand,
+        showScanQrPopup: tg.showScanQrPopup,
+        requestContact: tg.requestContact,
+        BiometricManager: tg.BiometricManager,
+        addToHomeScreen: tg.addToHomeScreen,
+        checkHomeScreenStatus: tg.checkHomeScreenStatus
     }
 }
 

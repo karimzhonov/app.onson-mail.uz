@@ -1,4 +1,5 @@
 import {LucideIcon} from "lucide-vue-next";
+import { Ref } from "vue";
 
 interface ItemData {
     label?: string
@@ -8,6 +9,8 @@ interface ItemData {
     badge?: string | number
     tag?: string
     chevron?: boolean
+    toggle?: boolean
+    toggleValue?: any
     command?: () => void
 }
 

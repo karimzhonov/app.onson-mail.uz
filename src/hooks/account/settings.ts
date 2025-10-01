@@ -1,7 +1,9 @@
-import {Coins, Languages, Link, MessageCircleMore} from "lucide-vue-next";
+import {Coins, Languages, Link, MessageCircleMore, Fingerprint} from "lucide-vue-next";
 import {MenuData} from "@/types/menu-list";
 import { locales } from "@/plugins/i18n";
 import { useI18n } from "vue-i18n";
+import { passport } from "@/composables/biometric";
+import { computed } from "vue";
 
 
 export const useSettings = (): MenuData[] => {
@@ -35,6 +37,19 @@ export const useSettings = (): MenuData[] => {
                     link: '/account/referral',
                     chevron: true
                 },
+            ]
+        },
+        {
+            items: [
+                {
+                    label: t('Безопасность'),
+                    icon: Fingerprint,
+                    toggle: true,
+                    toggleValue: passport,
+                    command() {
+                        passport.value = !passport.value
+                    }
+                }
             ]
         },
         {
