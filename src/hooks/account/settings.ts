@@ -3,11 +3,13 @@ import {MenuData} from "@/types/menu-list";
 import { locales } from "@/plugins/i18n";
 import { useI18n } from "vue-i18n";
 import { passport } from "@/composables/biometric";
-import { computed } from "vue";
+import { useTelegram } from "../telegram";
 
 
 export const useSettings = (): MenuData[] => {
     const {locale, t} = useI18n()
+
+    const {BiometricManager} = useTelegram()
 
     return [
         {
@@ -47,7 +49,13 @@ export const useSettings = (): MenuData[] => {
                     toggle: true,
                     toggleValue: passport,
                     command() {
-                        passport.value = !passport.value
+                        if (BiometricManager.isAccessGranted) {
+                            passport.value = !passport.value
+                            return
+                        }
+                        BiometricManager.requestAccess({ reason: "Подтвердите доступ с помощью биометрии" }, (isAccess) => {
+                            passport.value = isAccess
+                        });
                     }
                 }
             ]
